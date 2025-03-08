@@ -69,3 +69,34 @@ h2 {
 .insta-btn:hover {
    color: black;
 }
+
+img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   margin: 0 auto;
+   transition: transform 0.3s ease-in-out;
+   cursor: zoom-in; /* Professional cursor */
+}
+
+img:hover {
+   transform: scale(1.1); /* Enlarges the image by 10% */
+}
+
+/* Hide the default cursor */
+body {
+   cursor: none;
+}
+
+/* Create a custom cursor */
+.custom-cursor {
+   position: fixed;
+   width: 20px; /* Adjust size */
+   height: 20px;
+   background-color: whitesmoke; /* Cursor color */
+   border-radius: 50%; /* Makes it a circle */
+   pointer-events: none; /* Ensures it doesn't interfere with clicks */
+   transform: translate(-50%, -50%); /* Centers it around the mouse */
+   z-index: 9999;
+}
+
