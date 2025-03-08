@@ -1,0 +1,71 @@
+body {
+    background: #869281;
+    font-family: Helvetica;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .wrapper {
+    width: 90%;
+    margin: 0 auto;
+ }
+ /*Heading*/
+ a {
+    color: #f7f8f9;
+    text-decoration: none;
+ }
+ h1 {
+    color: #4a4454;
+    font-family: Helvetica;
+ }
+
+h2 {
+      color: #4a4454;
+      font-family: Helvetica;
+      font-weight: 600;
+      font-size: large
+ }
+ p {
+    color: #4a4454;
+ }
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+.grid .item {
+    width: 100%;
+    position: relative;
+}
+.grid .item img {
+    width: 100%;
+}
+.grid .item .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn:hover {
+   color: black;
+}
+
+.btn:hover {
+   color: black;
+}
+
+/* Instagram Button Specific Styling */
+.insta-btn {
+   color: #4a4454;
+   font-weight: bold;
+   display: flex;
+   justify-content: center; /* Centers the button horizontally */
+   align-items: center; /* Centers vertically (only if the container has height) */
+   width: 100%; /* Ensures the container spans full width */
+   margin-top: 20px; /* Adjust spacing as needed */
+}
+
+.insta-btn:hover {
+   color: black;
+}
