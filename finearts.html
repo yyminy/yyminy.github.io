@@ -6,6 +6,25 @@
   <title>Fine Arts</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    @font-face {
+      font-family: 'Absans';
+      src: local('Absans'), local('Absans Regular'),
+           url('Absans-Regular.woff2') format('woff2'),
+           url('Absans-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      font-family: 'Absans', sans-serif;
+      background: #f8f9f6;
+      margin: 0;
+      padding: 0 20px;
+      color: #27b579;
+      line-height: 1.6;
+    }
+
     .home-button {
       position: absolute;
       top: 28px;
@@ -16,28 +35,76 @@
       transition: color 0.3s ease;
     }
     .home-button:hover {
-      color: #4249aa; 
+      color: #4249aa;
     }
+
     .navbar {
       text-align: center;
       padding: 15px 0;
       font-size: 1.1em;
-      background-color: transparent;
     }
     .navbar a {
       text-decoration: none;
       color: #27b579;
       font-weight: 500;
       transition: color 0.3s ease;
+      margin: 0 5px;
     }
     .navbar a:hover {
       color: #4249aa;
     }
+
     .page-title {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 60px;
       margin-bottom: 60px;
-      font-size: 2em;
+      font-size: 2.5em;
+      color: #4249aa;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto 60px auto;
+      text-align: center;
+    }
+
+    .container img {
+      max-width: 70%;
+      height: auto;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      color: #4249aa;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    .container a {
+      color: #27b579;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+    .container a:hover {
+      color: #4249aa;
+    }
+
+    footer {
+      text-align: center;
+      margin: 60px 0;
+      color: #4249aa;
+      font-size: 0.9em;
     }
   </style>
 </head>

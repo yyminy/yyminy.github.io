@@ -3,7 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
+  <style>
+    @font-face {
+  font-family: 'Absans';
+  src: local('Absans'), local('Absans Regular'),
+       url('Absans-Regular.woff2') format('woff2'),
+       url('Absans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Absans', sans-serif;
+}
+
+
+    body {
+      font-family: 'Absans';
+      background-color: #f8f9f6;
+      color: #4249aa;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+
     .home-button {
       position: absolute;
       top: 28px;
@@ -11,8 +35,9 @@
       font-size: 3em;
       text-decoration: none;
       color: #27b579;
-      transition: color 0.3s ease; 
+      transition: color 0.3s ease;
     }
+
     .home-button:hover {
       color: #4249aa; 
     }
@@ -21,31 +46,61 @@
       text-align: center;
       padding: 15px 0;
       font-size: 1.1em;
-      background-color: transparent;
     }
+
     .navbar a {
       text-decoration: none;
       color: #27b579;
       font-weight: 500;
-      transition: color 0.3s ease; 
+      transition: color 0.3s ease;
     }
 
     .navbar a:hover {
-    color: #4249aa; 
+      color: #4249aa; 
     }
 
     .page-title {
-      text-align: center;
       margin-top: 20px;
       margin-bottom: 60px;
       font-size: 2em;
+    }
+
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #4249aa;
+    }
+
+    p {
+      margin: 5px 0 20px 0;
+      font-size: 1em;
+    }
+
+    a {
+      color: #27b579; /* visible link color */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #4249aa; /* change on hover */
+    }
+
+    .wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #27b579;
     }
   </style>
 </head>
 <body>
    <a href="index.html" class="home-button">⌂</a>
 
-  <link rel="stylesheet" href="style.css">
   
   
 <div class="navbar">
@@ -64,9 +119,8 @@
     <h2>Erin Min is currently a Graphic Designer attending the Rhode Island school of Design with a concentration in Computation.</h2>
     <h2>Born in Los Angeles, growing up in Seattle and South Korea, her work is frequently based on those experiences.</h2>
     <h2>She wants to learn more about herself through various opportunities life has for her.</h2>
-
-    <h2>LinkedIn</h2>
-    <p><a href="https://www.linkedin.com/in/erin-min-aaa301370/" target="_blank">LinkedIn Profile</a></p>
+<br> </br>
+    <p><a href="https://www.linkedin.com/in/erin-min-aaa301370/" target="">LinkedIn Profile</a></p>
   </section>
 
                 <section class="wrapper">
