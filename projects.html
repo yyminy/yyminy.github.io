@@ -1,135 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fine Arts</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    @font-face {
-      font-family: 'Absans';
-      src: local('Absans'), local('Absans Regular'),
-           url('Absans-Regular.woff2') format('woff2'),
-           url('Absans-Regular.woff') format('woff');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
+  <title>Projects - Erin Min</title>
 
-    body {
-      font-family: 'Absans';
-      background: #f8f9f6;
-      margin: 0;
-      padding: 0 20px;
-      color: #27b579;
-      line-height: 1.6;
-    }
+<style>
+  @font-face {
+    font-family: 'Absans';
+    src: local('Absans'), local('Absans Regular'),
+         url('Absans-Regular.woff2') format('woff2'),
+         url('Absans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
 
-    .home-button {
-      position: absolute;
-      top: 28px;
-      left: 32px;
-      font-size: 3em;
-      text-decoration: none;
-      color: #27b579;
-      transition: color 0.3s ease;
-    }
-    .home-button:hover {
-      color: #4249aa;
-    }
+  body {
+    font-family: 'Absans';
+    background: #f8f9f6;
+    margin: 0;
+    padding: 0 20px;
+    color: #27b579;
+    line-height: 1.6;
+  }
 
-    .navbar {
-      text-align: center;
-      padding: 15px 0;
-      font-size: 1.1em;
-    }
-    .navbar a {
-      text-decoration: none;
-      color: #27b579;
-      font-weight: 500;
-      transition: color 0.3s ease;
-      margin: 0 5px;
-    }
-    .navbar a:hover {
-      color: #4249aa;
-    }
+  /* Home + Navbar */
+  .home-button {
+    position: absolute;
+    top: 28px;
+    left: 32px;
+    font-size: 3em;
+    text-decoration: none;
+    color: #27b579;
+    transition: color 0.3s ease;
+  }
+  .home-button:hover {
+    color: #4249aa;
+  }
 
-    .page-title {
-      text-align: center;
-      margin-top: 60px;
-      margin-bottom: 60px;
-      font-size: 2.5em;
-      color: #4249aa;
-    }
+  .navbar {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.1em;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: #27b579;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin: 0 5px;
+  }
+  .navbar a:hover {
+    color: #4249aa;
+  }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto 60px auto;
-      text-align: center;
-    }
+  /* Title */
+  .page-title {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 2.5em;
+    color: #4249aa;
+  }
 
-    .container img {
-      max-width: 50%;
-      height: auto;
-      border-radius: 15px;
-      margin-bottom: 20px;
-    }
+  /* Container */
+  .container {
+    max-width: 850px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+  }
 
-    h1 {
-      font-size: 1.8em;
-      color: #4249aa;
-      margin-bottom: 10px;
-    }
+  .container img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 30px;
+  }
 
-    h2 {
-      font-size: 1.4em;
-      margin-bottom: 10px;
-    }
+  /* Headings */
+  h1 {
+    font-size: 1.4em;
+    color: #4249aa;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
 
-    p {
-      font-size: 1em;
-      margin-bottom: 10px;
-    }
+  h2 {
+    font-size: 2.2em;
+    margin: 15px 0;
+    font-weight: 400;
+    color: #27b579;
+    letter-spacing: -0.5px;
+  }
 
-    .container a {
-      color: #27b579;
-      text-decoration: underline;
-      transition: color 0.3s ease;
-    }
-    .container a:hover {
-      color: #4249aa;
-    }
+  h2 a {
+    color: #27b579;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  h2 a:hover {
+    color: #4249aa;
+    border-bottom: 1px solid #4249aa;
+  }
 
-    footer {
-      text-align: center;
-      margin: 60px 0;
-      color: #4249aa;
-      font-size: 0.9em;
+  /* Body text */
+  p {
+    font-size: 0.9em;
+    line-height: 1.7;
+    color: #27b579;
+    margin: 6px 0;
+  }
+
+  .container a {
+    color: #27b579;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  .container a:hover {
+    color: #4249aa;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    margin: 80px 0 40px;
+    color: #4249aa;
+    font-size: 0.85em;
+  }
+
+  /* Subtle fade-in animation for a portfolio feel */
+  .container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+  }
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    .footer p {
-  text-align: center;
-  margin: 20px 0;
-}
-
-  </style>
+  }
+</style>
 </head>
+
 <body>
 
-  <a href="index.html" class="home-button">⌂</a>
+     <a href="index.html" class="home-button">⌂</a>
 
-  <div class="navbar">
-    <a href="about.html">About</a> /
-    <a href="websites.html">Coding</a> /
-    <a href="books.html">Books</a> /
-    <a href="posters.html">Posters</a> /
-    <a href="finearts.html">Fine Arts</a> /
-    <a href="contacts.html">Contacts</a>
+  
+<div class="navbar">
+  <a href="about.html">About</a> /
+  <a href="projects.html">Projects</a> /
+<a href="ErinMin_Resume.pdf" target="_blank">Resume</a> /
+<a href="https://www.linkedin.com/in/erin-min" target="_blank">LinkedIn</a>/
+<a href="https://www.instagram.com/yyminy/#" target="_blank">Instagram</a> /
+<a href="contacts.html">Contacts</a>
+</div>
+
+<h1 class="page-title">Coding</h1>
+<br> </br>
+
+  <div class="container">
+    <img src="mbfu.png" alt="MBFU">
+    <h1>MBFU: The Visual Experience</h1>
+    <h2><a href="https://erinymin.github.io" target="_blank">erinymin.github.io</a></h2>
+    <p>Made with HTML, CSS, and JavaScript</p>
+    <p>
+MBFU: The Digital Experience was created for those who could not attend the exhibition in person. The site includes 3D scans of the gallery space, allowing viewers to explore the works and environment as if they were walking through it themselves. By moving through the scans, visitors can see how the artworks interact with the space, the floor installation, and the atmosphere of the room. The digital format extends the exhibition beyond its physical location, making it accessible anywhere while still preserving the sense of immersion and presence.
+    </p>
   </div>
 
-  <h1 class="page-title">Fine Arts</h1>
-  <br> </br>
+  <div class="container">
+    <img src="website.png" alt="Things that Help me Sleep a Little Better">
+    <h1>Things that Help me Sleep a Little Better</h1>
+    <p>Made with HTML, CSS, and JavaScript</p>
+    <p>
+      “Things That Help Me Sleep a Little Better: Library of Gratitude” is an interactive website created for my CTC class. Inspired by the idea that happiness is when there isn’t anything left to think about before going to sleep, the site is a digital library of gratitude—a collection of 100 images from moments in my life.
+    </p>
+  </div>
 
+  <div class="container">
+    <img src="tomato.jpeg" alt="You look like a Tomato">
+    <h1>You look like a Tomato</h1>
+    <p>Made with HTML, CSS, and JavaScript</p>
+    <p>
+        This playful coding project features an innovative HTML filter AI website that transforms your photos into whimsical tomato-inspired creations. Emphasizing fun and creativity, the site invites users to engage with the technology in a lighthearted way, offering a unique experience that encourages exploration and nicheness. By blending coding skills with a touch of humor, this project showcases the delightful possibilities of web development and AI. The interface is designed to be user-friendly, allowing anyone to turn their camera on and have an interactive experience with the website. This project not only highlights the joy of coding but also serves as a reminder of the playful side of technology and AI, but showing my color as a unique designer.
+    </p>
+  </div>
+
+  <div class="container">
+    <img src="dokdo.png" alt="My name is Dokdo">
+    <h1>My Name is Dokdo</h1>
+    <a href="dokdo.pdf" target="_blank">View PDF</a>
+    <p>Made with Adobe Illustrator and Adobe InDesign</p>
+    <p>
+        "My Name is Dokdo" is a thoughtfully crafted zine designed to educate students and educators about the complex and often controversial history of the island of Dokdo. Through a visually engaging format, this zine breaks down the multifaceted issues surrounding Dokdo into accessible and neutral language, making it easy for readers to grasp the significance of this disputed territory. The artwork and layout invite curiosity while promoting an open dialogue about national identity, historical context, and the importance of understanding differing perspectives. By presenting the information in a digestible manner, "My Name is Dokdo" aims to foster informed discussions and encourage critical thinking about the narratives that shape our understanding of geographical and cultural issues. 
+    </p>
+  </div>
+      <div class="container">
+    <img src="rrr.jpeg" alt="Ribs Rites Ruptures">
+    <div class="text">
+    <h1>Ribs, Rites, Ruptures</h1>
+    <h2><a href="https://drive.google.com/file/d/1rTTsnWyr-4-xguQe-mIixc3GCMfSAW7S/view?usp=sharing" target="_blank">View Video</a></h2>
+    <p>Made with Adobe Indesign, Bound with Coptic Binding, Printed on Butcher Paper</p>
+    <p>  3.5"x7"</p>
+    <p>
+Ribs, Rites, and Ruptures is a book about Korean women writers, memory, the body, and resistance. The design reflects these themes through both material and form. The book is bound with red coptic stitching, showing along the spine like flower petals. The red thread represents beauty, pain, and the act of holding things together—just like the women in the stories and poems. It also echoes the blood and rebellion found in the work of Korean poets like Kim Hyesoon, whose writing is raw, surreal, and powerful. The book is made from butcher paper, a soft, semi-transparent material. It feels fragile, like skin or memory, and allows hints of what’s inside to show through. This layered look mirrors the emotional and historical depth in the work of writers like Han Kang, who writes with quiet intensity and silence. The book honors the strength and transformation found in contemporary Korean poetry and fiction. It is made to feel like a ritual: stitched by hand, gentle but fierce, full of layers, silence, and life.
+    </p>
+    <br> </br>
+    <br> </br>
+    </div>
+    </div>
+
+    <div class="container">    
+    <img src="ynhd.jpeg" alt="YNHD">
+    <div class="text">
+    <h1>My YNHD (Yeonhui-dong) </h1>
+    <h2><a href="https://drive.google.com/file/d/1IA9mWThtRbx4bjLO70CGq1NHyGE503Su/view?usp=sharing" target="_blank">View Video</a></h2>
+    <p>Made with Adobe Indesign, Perfect Binded</p>
+    <p>
+This issue centers on Yeonhui-dong, a quiet neighborhood in western Seoul that occupies a space between city and suburb, motion and pause. Tucked between the more urban districts of Hongdae and Sinchon, Yeonhui-dong is shaped not by spectacle, but by its subtle rhythms—narrow streets, low-rise homes, and small businesses that foster a slow and steady pace of life. The magazine explores this unique atmosphere through manipulated photographs and spatial studies that focus on mood, memory, and transition. Rather than presenting Yeonhui-dong as it is, the imagery in this issue intentionally distorts, layers, and softens the real—blurring the line between documentation and impression. By adjusting light, scale, and texture, the photographs become a tool for reinterpreting the everyday—revealing a more internal, emotional reading of place.
+    </p>
+    <br> </br>
+    <br> </br>
+    </div>
+    </div>
+
+        <div class="container">
+        <img src="cardin.jpeg" alt="Human Cube">
+        <div class="text">
+            <h1>The Human Cube</h1>
+            <p>Made with Adobe Illustrator</p>
+            <p>7” x 7” x 7"</p>
+            <p>
+The Human Cube is a conceptual color theme inspired by the visionary futurism of Pierre Cardin, whose Space Age designs of the 1960s redefined fashion through geometric form, architectural structure, and avant-garde innovation. This project translates his iconic aesthetic into a chromatic experience, fusing metallic minimalism, neon vibrancy, and deep-space tones to evoke a sleek, modular future. Drawing from Cardin’s use of unconventional materials like vinyl, metal, and plastic, and his unisex, sculptural silhouettes, The Human Cube envisions clothing and color as extensions of space-age architecture. The theme celebrates Cardin’s legacy as a designer who saw fashion as a total art form, merging the human body with futuristic habitats, and reimagining personal expression through the lens of interstellar design.
+            </p>
+            <br> </br>
+            <br> </br>
+        </div>
+        </div>
+
+            <div class="container">
+    <img src="book.png" alt="Two Designer Accordion Book Design">
+    <div class="text">
+    <h1>Two Designer Accordion Book Design</h1>
+    <p>Made with Adobe InDesign and Adobe Illustrator </p>
+    <p>8.5” x 24”</p>
+    <p>
+        This project explores the lives and work of two designers—one historical and one contemporary—through a detailed timeline that highlights their training, areas of interest, projects, and professional journeys. While both have contributed to various artistic fields, the focus remains on their impact on graphic design, along with the influences that shaped their creative evolution. To visually unify the project, I designed an accordion book that reflects the psychedelic themes present in both artists' work. The structure of the book allows for a fluid, unfolding narrative, echoing the way their designs challenge perception and push creative boundaries. The cover leaf serves as both a closure and an invitation—drawing the viewer into a world of vibrant colors, hypnotic patterns, and layered storytelling.
+    </p>
+    <br> </br>
+    <br> </br>
+    </div>
+    </div>
+
+    <div class="container">
+    <img src="type.png" alt="Typography One Book">
+    <div class="text">
+    <h1>Typography One Book</h1>
+    <a href="typo.pdf" target="_blank">View PDF</a>
+    <p>Made with Adobe Indesign and Adobe Illustrator</p>
+    <p>11"x17"</p> 
+    <p>
+        This project represents a culmination of the skills and techniques learned throughout Typography I, where the focus was on mastering the foundational elements of type design. Through a series of exercises and creative explorations, I delved into the core principles of typography, from letterform construction and spacing to hierarchy and readability. The work reflects my growing understanding of how typography communicates visually, the impact of font choices, and the balance between functionality and aesthetic appeal. It’s a journey through the nuanced world of type, where form meets function, and where every curve, line, and space plays a vital role in crafting meaning. The book itself can be seen as a work of typography.
+    </p>
+    <br> </br>
+    <br> </br>
+</div>
+</div>
+<br> </br>
+<br> </br>
+ <div class="container">
+    <img src="mbfu1.png" alt="MBFU">
+    <div class="text">
+    <h1>Me Before U: Erin's First Exhibition</h1>
+    <p>Made with Adobe Indesign and Adobe Illustrator</p>
+    <p>
+        MBFU (short for Me Before U) is my first exhibition poster, created as both a visual identity and conceptual entry point into the project. Visually, the poster depicts a pink illustrated space filled with interconnected lines and bubbles, symbolizing how individual moments, relationships, and ideas are all part of a larger connected whole. This network-like imagery reflects the central theme of MBFU: that personal stories are always interwoven with collective experiences.
+
+    </p>
+    <br> </br>
+    <br> </br>
+</div>
+</div>
+    <div class="container">
+    <img src="yyminy.png" alt="YYMINY">
+    <div class="text">
+    <h1>YYMINY</h1>
+    <p>Made with Adobe Indesign and Adobe Illustrator</p>
+    <p>16” x 20”</p>
+    <p>
+        YYMINY is rooted in simplicity and modernity, utilizing Helvetica, timeless aesthetic as a foundation for visual communication. Through careful gradation techniques, I explore the dynamic interplay of typography and form, crafting creative posters that balance clarity with expressive depth. This approach allows for a seamless blend of structure and experimentation, reinforcing the brand’s identity while pushing the boundaries of typographic design. YYMINY embodies a refined yet bold visual language that evolves through nuanced gradation and typographic precision.
+    </p>
+    <br> </br>
+    <br> </br>
+</div>
+</div>
+
+    <div class="container">
+    <img src="cactus.png" alt="Object Poster">
+    <div class="text">
+    <h1>Object Poster</h1>
+    <p>Made with Adobe InDesign and Adobe Illustrator </p>
+    <p>11” x 24”</p>
+    <p>
+        This project explores the challenge of visual communication by abstracting a given object into a singular poster design without relying on direct representation or sequential storytelling. By utilizing color, shape, and composition, the design conveys the essence and emotional impact of the object, encouraging viewers to engage in deeper interpretation. The approach pushes the boundaries of traditional object depiction, inviting creativity through conceptual expression rather than literal imagery.
+    </p>
+    <br> </br>
+    <br> </br>
+</div>
+</div>
+
+    <div class="container">
+        <div class="text">
+    <img src="flower.png" alt="Designed Typeface">
+    <h1>Designed Typeface: Blossom</h1>
+    <p>Adobe InDesign, Adobe Illustrator and Adobe Photoshop</p>
+    <p>
+        This project explores that evolution by designing a custom lowercase Latin alphabet named Blossom. It is based on a flower-shaped grid system—a structure that introduces organic, feminine qualities to letterforms while maintaining the principles of reduction and abstraction that define graphic design. The process of developing this type system reinforced the essential design practice of simplifying and refining information into a functional visual language. To further contextualize the typeface, I created mockups for flower packaging, where the soft, organic forms of the type harmonize with the product’s natural essence. Understanding of how writing systems develop, while also strengthening my ability to merge conceptual thinking with functional design, creating typography that is both expressive and practical.
+    </p>
+    <br> </br>
+    <br> </br>
+</div>
+</div>
+
+    <div class="container">
+    <img src="ilove.png" alt="I Love Silence">
+    <div class="text">
+    <h1>I Love Silence</h1>
+    <p>Made with Adobe Indesign and Adobe Illustrator</p>
+    <p>
+        This project, “I Love You, Silence”, explores the concept of silence through both digital and physical mediums, emphasizing its presence as something to be seen, felt, and engaged with. As part of this exploration, I developed a brand identity that visually represents silence through a series of logos and symbols. Each design choice—whether in typography, minimal forms, or negative space—aims to embody the stillness and depth of silence. Some logos evokes calm, as well as trendiness as the audience are people in this generation, while others highlight the contrast between absence and presence. Through these symbols, silence is given a form, a recognizable mark in a world saturated with noise. Together, these elements work in harmony to advocate for silence—not as emptiness, but as something profound and worthy of appreciation.
+    </p>
+    <br> </br>
+    <br> </br>
+</div>
+</div>
+
+        <div class="container">
+    <img src="letterpress.png" alt="Letterpress Print">
+    <div class="text">
+    <h1>Letterpress Print</h1>
+    <p>Made with Letter Press, CTP, Adobe Illustrator and Procreate</p>
+    <p>
+        Exploring letterpress for the first time was a transformative experience, bridging traditional printmaking with digital design. Using InDesign and CTP (Computer-to-Plate) technology, I translated my design I made on Procreate into Adobe Illustrator into a physical print, bringing my artwork to life in a tactile, textured form. The process of setting up plates, inking, and pressing each print by hand deepened my appreciation for the craft—where every detail, from pressure to paper choice, impacts the final outcome. Despite being new to the medium, the result exceeded my expectations, reinforcing the beauty of combining digital precision with analog techniques. This experience not only expanded my technical skills but also reshaped how I think about design—balancing control with the unpredictability of the press.
+    </p>
+    <br> </br>
+    <br> </br>
+</div>
   <div class="container">
     <img src="useless.png" alt="Useless Wearable">
     <div class="text">
@@ -351,11 +571,9 @@
   <br> </br>
   <br> </br>
 
-<section class="wrapper footer">
+ <section class="wrapper footer">
   <p>©2025 Erin Min. All rights reserved.</p>
 </section>
 
-
-  <script src="script.js"></script>
 </body>
 </html>
