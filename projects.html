@@ -17,14 +17,15 @@
 }
 
 body {
-  font-family: 'Absans';
-  background: #f8f9f6;
+  font-family: 'Absans', sans-serif;
   margin: 0;
+  padding: 0;
+  background: #f8f9f6;
   color: #27b579;
   line-height: 1.6;
 }
 
-/* Home */
+/* Home Button */
 .home-button {
   position: fixed;
   top: 28px;
@@ -42,80 +43,68 @@ body {
 .navbar {
   text-align: center;
   padding: 20px 0;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 .navbar a {
   text-decoration: none;
   color: #27b579;
-  margin: 0 5px;
+  margin: 0 8px;
 }
 .navbar a:hover {
   color: #4249aa;
 }
 
-/* Title */
+/* Page Title */
 .page-title {
   text-align: center;
   margin: 60px 0 80px;
-  font-size: 2.5em;
+  font-size: 3em;
   color: #4249aa;
 }
 
-/* === FULL BLEED PROJECTS === */
+/* Projects */
 .project {
   position: relative;
-  width: 100vw;
-  min-height: 100vh;
-  margin-left: calc(-50vw + 50%);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  margin: 60px 0;
+  text-align: center;
 }
 
-.project::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(248, 249, 246, 0.25);
+/* Project Images: full bleed, large, responsive */
+.project img.project-img {
+  width: 100%;       /* full width of viewport */
+  height: auto;      /* maintain aspect ratio */
+  display: block;
+  max-height: 90vh;  /* nearly full screen height */
+  object-fit: contain; /* ensure full image is visible */
 }
 
-.project.right {
-  justify-content: flex-end;
-}
-
-/* Side text */
+/* Project Text Overlay */
 .project-text {
-  position: relative;
-  z-index: 2;
-  max-width: 360px;
-  margin-left: 5vw;
-  padding: 24px;
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding: 32px;
   background: rgba(248, 249, 246, 0.9);
-  border-radius: 14px;
-}
-
-.project.right .project-text {
-  margin-left: 0;
-  margin-right: 5vw;
-}
-
-.project-text h1 {
-  font-size: 1.2em;
+  border-radius: 16px;
+  text-align: left;
   color: #4249aa;
-  margin-bottom: 6px;
+}
+
+/* Typography */
+.project-text h1 {
+  font-size: 2em;
+  margin-bottom: 12px;
   font-weight: 500;
 }
-
 .project-text p {
-  font-size: 0.75em;
+  font-size: 1.1em;
+  margin: 6px 0;
   line-height: 1.6;
-  margin: 4px 0;
 }
-
 .project-text a {
   color: #27b579;
   text-decoration: underline;
+  font-size: 1.1em;
 }
 .project-text a:hover {
   color: #4249aa;
@@ -124,21 +113,29 @@ body {
 /* Footer */
 footer {
   text-align: center;
-  margin: 100px 0 40px;
+  margin: 80px 0;
   color: #4249aa;
-  font-size: 0.85em;
+  font-size: 1em;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .project {
-    min-height: 80vh;
-  }
+/* Responsive */
+@media (max-width: 1024px) {
   .project-text {
-    margin: 0 auto;
     max-width: 90%;
+    font-size: 1em;
+    padding: 24px;
   }
 }
+
+@media (max-width: 768px) {
+  .project-text {
+    max-width: 95%;
+    font-size: 0.95em;
+    padding: 20px;
+  }
+}
+
+
 </style>
 </head>
 
@@ -160,7 +157,8 @@ footer {
 <h1 class="page-title">Projects</h1>
 
 
-<section class="project right" style="background-image:url('mbfu1.png');">
+<section class="project right">
+<img src="mbfu1.png" class="project-img" alt="MBFU Project">
   <div class="project-text">
     <h1>MBFU (Me Before You): Erin Min’s First Exhibition</h1>
     <p>Year: Summer 2025</p>
@@ -179,7 +177,8 @@ Roki Kim — Managing, Photography; Daniel Lee — Installation Assistance; Panc
   </div>
 </section>
 
-<section class="project right" style="background-image:url('mbfu.png');">
+<section class="project right">
+<img src="mbfu.png" class="project-img" alt="MBFU Digital Experience">
   <div class="project-text">
     <h1>MBFU (Me Before You): The Digital Experience</h1>
    <p>Year: Summer 2025</p> 
@@ -197,7 +196,8 @@ through it themselves.
   </div>
 </section>
 
-<section class="project" style="background-image:url('sleep.jpg');">
+<section class="project right">
+<img src="sleep.jpg" class="project-img" alt="Sleep Project">
   <div class="project-text">
     <h1>Things that Help Me Sleep a Little Better: a Library of Gratitude</h1>
     <p>Year: Winter 2025</p>
@@ -215,7 +215,8 @@ emotion and a library of gratitude, guided by the phrase “things that help me 
   </div>
 </section>
 
-<section class="project" style="background-image:url('ribs.jpg');">
+<section class="project">
+<img src="ribs.jpg" class="project-img" alt="Ribs, Rites, and Ruptures">
   <div class="project-text">
     <h1>Ribs, Rites, and Ruptures</h1>
     <p>Year: Spring 2025</p>
@@ -232,7 +233,8 @@ butcher paper and layered form honor the raw, layered voices of writers like Kim
   </div>
 </section>
 
-<section class="project" style="background-image:url('pic.jpg');">
+<section class="project right">
+<img src="pic.jpg" class="project-img" alt="Take a pic! Filter">
   <div class="project-text">
     <h1>“Take a pic!” Filter</h1>
     <p>Year: Spring 2025</p>
@@ -248,7 +250,8 @@ rather than what is closed.
   </div>
 </section>
 
-<section class="project" style="background-image:url('san.jpg');">
+<section class="project right">
+<img src="san.jpg" class="project-img" alt="Sanctuary Project">
   <div class="project-text">
     <h1>Sanctuary Project</h1>
     <p>Year: Fall 2025</p>
@@ -264,7 +267,8 @@ environment.
   </div>
 </section>
 
-<section class="project" style="background-image:url('slow.jpg');">
+<section class="project right">
+<img src="slow.jpg" class="project-img" alt="Things you see when you slow down">
   <div class="project-text">
     <h1>Things you see when you slow down</h1>
     <p>Year: Fall 2025</p>
@@ -284,7 +288,8 @@ and the act of slowing down itself.
   </div>
 </section>
 
-<section class="project right" style="background-image:url('sally.jpg');">
+<section class="project right">
+<img src="sally.jpg" class="project-img" alt="Sally’s Beauty Mark">
   <div class="project-text">
     <h1>Sally’s Beauty Mark</h1>
     <p>Year: Fall 2025</p>
@@ -300,7 +305,8 @@ exploration of how we learn to see ourselves through others.
   </div>
 </section>
 
-<section class="project" style="background-image:url('hello.JPG');">
+<section class="project right">
+<img src="hello.JPG" class="project-img" alt="Memory Test Poster">
   <div class="project-text">
     <h1>Memory Test Poster</h1>
     <p>Year: Fall 2025</p>
@@ -316,7 +322,8 @@ recognition, memory, and emotion.
 </section>
 
 
-<section class="project right" style="background-image:url('ynhd.jpg');">
+<section class="project right">
+  <img src="ynhd.jpg" class="project-img" alt="My YNHD (Yeonhui-dong)">
   <div class="project-text">
     <h1>My YNHD (Yeonhui-dong)</h1>
     <p>Year: Spring 2025</p>
@@ -334,7 +341,8 @@ spatial studies that focus on mood, memory, and transition.
   </div>
 </section>
 
-<section class="project" style="background-image:url('tomato.jpg');">
+<section class="project right">
+  <img src="tomato.jpg" class="project-img" alt="You Look Like a Tomato">
   <div class="project-text">
     <h1>You Look Like a Tomato</h1>
     <p>Year: Spring 2025</p>
@@ -347,7 +355,8 @@ humor, this project showcases the delightful possibilities of web development an
   </div>
 </section>
 
-<section class="project" style="background-image:url('cube.jpg');">
+<section class="project right">
+  <img src="cube.jpg" class="project-img" alt="The Human Cube">
   <div class="project-text">
     <h1>The Human Cube</h1>
     <p>Year: Spring 2025</p>
@@ -361,7 +370,8 @@ The theme celebrates Cardin’s legacy as a designer who saw fashion as a total 
   </div>
 </section>
 
-<section class="project" style="background-image:url('two.jpg');">
+<section class="project right">
+  <img src="two.jpg" class="project-img" alt="Two Designer Accordian Book">
   <div class="project-text">
     <h1>Two Designer Accordian Book</h1>
     <p>Year: Fall 2024</p>
@@ -377,7 +387,8 @@ unify the project, I designed an accordion book that reflects the psychedelic th
 </div>
 </section>
 
-<section class="project" style="background-image:url('flower.jpg');">
+<section class="project right">
+  <img src="flower.jpg" class="project-img" alt="“Flowerinject” Typeface">
   <div class="project-text">
     <h1>“Flowerinject” Typeface</h1>
     <p>Year: Fall 2024</p>
@@ -391,7 +402,8 @@ the essential design practice of simplifying and refining information into a fun
   </div>
 </section>
 
-<section class="project" style="background-image:url('cactus.jpg');">
+<section class="project right"> 
+<img src="cactus.jpg" class="project-img" alt="“An Alien on Earth” Visual System">
   <div class="project-text">
     <h1>“An Alien on Earth” Visual System</h1>
     <p>Year: Fall 2024</p>
@@ -405,7 +417,8 @@ composition, the design conveys the essence.</p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('dokdo.png');">
+<section class="project right">
+  <img src="dokdo.png" class="project-img" alt="“My Name is Dokdo” Publication">
   <div class="project-text">
     <h1>“My Name is Dokdo” Publication</h1>
     <p>Year: Winter 2024</p>
@@ -421,7 +434,8 @@ of the island of Dokdo.</p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('78.jpg');">
+<section class="project right">
+  <img src="78.jpg" class="project-img" alt="78! Pop up Brand Identity">
   <div class="project-text">
     <h1>78! Pop up Brand Identity</h1>
     <p>Year: Summer 2025</p>
@@ -434,7 +448,8 @@ meaningful design. Through this project, creating a visual identity for the bran
   </div>
 </section>
 
-<section class="project" style="background-image:url('silence.jpg');">
+<section class="project right">
+  <img src="silence.jpg" class="project-img" alt="“I Love You Silence” Campaign">
   <div class="project-text">
     <h1>“I Love You Silence” Campaign</h1>
     <p>Year: Spring 2025</p>
@@ -447,7 +462,8 @@ physical flyer, this project emphasizes the visual representation of absence.</p
   </div>
 </section>
 
-<section class="project" style="background-image:url('myself.jpg');">
+<section class="project right">
+  <img src="myself.jpg" class="project-img" alt="Minutes for Myself">
   <div class="project-text">
     <h1>Minutes for Myself</h1>
     <p>Year: Spring 2025</p>
@@ -462,7 +478,8 @@ routine, recognizing the balance between digital habits and restorative care.</p
 </div>
 </section>
 
-<section class="project" style="background-image:url('compo.jpg');">
+<section class="project right"> 
+  <img src="compo.jpg" class="project-img" alt="Composition Studies">
   <div class="project-text">
     <h1>Composition Studies</h1>
     <p>Year: Fall 2024</p>
@@ -476,7 +493,8 @@ sense of movement and energy, inviting viewers to engage with the artwork on mul
   </div>
 </section>
 
-<section class="project" style="background-image:url('useless.png');">
+<section class="project right"> 
+  <img src="useless.png" class="project-img" alt="“Useless” Visual System">
   <div class="project-text">
     <h1>Burden of the Bride</h1>
     <p>Year: Spring 2024</p>
@@ -491,7 +509,8 @@ challenging the conventional functionality of clothing.</p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('strawberry.png');">
+<section class="project right">
+  <img src="strawberry.png" class="project-img" alt="Charcoal Animation: Strawberry Girl">
   <div class="project-text">
     <h1>Charcoal Animation: Strawberry Girl</h1>
     <p>Year: Fall 2023</p>
@@ -507,7 +526,8 @@ charcoa</p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('alien.jpeg');">
+<section class="project right"> 
+  <img src="alien.jpeg" class="project-img" alt="The Sun">
   <div class="project-text">
     <h1>The Sun</h1>
     <p>Year: Spring 2024</p>
@@ -525,7 +545,8 @@ surface of plaster.</p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('memory.png');">
+<section class="project right">
+  <img src="memory.png" class="project-img" alt="My Memory Box">
   <div class="project-text">
     <h1>My Memory Box</h1>
     <p>Year: Spring 2024</p>
@@ -541,7 +562,8 @@ history, like memory itself.</p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('fifty.png');">
+<section class="project right">
+  <img src="fifty.png" class="project-img" alt="50 Drawings">
   <div class="project-text">
     <h1>50 drawings</h1>
     <p>Year: Spring 2024</p>
@@ -557,7 +579,8 @@ introspection.</p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('class.png');">
+<section class="project right">
+  <img src="class.png" class="project-img" alt="Nude">
   <div class="project-text">
     <h1>Nude</h1>
     <p>Year: Spring 2024</p>
@@ -574,7 +597,8 @@ lines.</p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('dansaekhwa.png');">
+<section class="project right">
+  <img src="dansaekhwa.png" class="project-img" alt="Dansaekhwa: Chaotic Composure">
   <div class="project-text">
     <h1>Dansaekhwa: Chaotic Composure</h1>
     <p>Year: Spring 2023</p>
@@ -590,7 +614,8 @@ having traditional Korean stylistic features and color schemes. </p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('han.png');">
+<section class="project right">
+  <img src="han.png" class="project-img" alt="My Treasure, Han">
   <div class="project-text">
     <h1>My Treasure, Han</h1>
     <p>Year: Spring 2023</p>
@@ -608,7 +633,8 @@ word. </p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('stipulated.png');">
+<section class="project right">
+  <img src="stipulated.png" class="project-img" alt="The Tipping Point">
   <div class="project-text">
     <h1>The Tipping Point</h1>
     <p>Year: Spring 2023</p>
@@ -624,7 +650,8 @@ School division for The Tipping Point.</p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('pandorasbox.png');">
+<section class="project right">
+  <img src="pandorasbox.png" class="project-img" alt="Pandora's Box">
   <div class="project-text">
     <h1>Pandora’s Box</h1>
     <p>Year: Spring 2023</p>
@@ -639,7 +666,8 @@ muses.</p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('selflove.png');">
+<section class="project right">
+  <img src="selflove.png" class="project-img" alt="Self Love">
   <div class="project-text">
     <h1>Self Love</h1>
     <p>Year: Spring 2023</p>
@@ -655,7 +683,8 @@ taking care of each other, self-care. </p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('humanconscience.jpeg');">
+<section class="project right">
+  <img src="humanconscience.jpeg" class="project-img" alt="Human Conscience">
   <div class="project-text">
     <h1>Human Conscience</h1>
     <p>Year: Spring 2023</p>
@@ -673,7 +702,8 @@ Special Selection in 2021 for Human Conscience.</p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('feet.png');">
+<section class="project right"> 
+  <img src="feet.png" class="project-img" alt="Why are we so Selfish?">
   <div class="project-text">
     <h1>Why are we so Selfish?</h1>
     <p>Year: Spring 2023</p>
@@ -690,7 +720,8 @@ how people should always go forward in life. </p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('sewol.png');">
+<section class="project right">
+  <img src="sewol.png" class="project-img" alt="When SEWOL Comes">
   <div class="project-text">
     <h1>When SEWOL Comes</h1>
     <p>Year: Fall 2023</p>
@@ -706,7 +737,8 @@ tragedy.</p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('heart.png');">
+<section class="project right">
+  <img src="heart.png" class="project-img" alt="My S(e)oul and (He)art">
   <div class="project-text">
     <h1>My S(e)oul and (He)art</h1>
     <p>Year: Fall 2023</p>
@@ -721,7 +753,9 @@ heart is with Korea. </p>
   </div>
 </section>
 
-<section class="project" style="background-image:url('stamp.png');">
+<section class="project right">
+  <img src="stamp.png" class="project-img" alt="Thank you for always
+doing your Best">
   <div class="project-text">
     <h1>Thank you for always
 doing your Best</h1>
